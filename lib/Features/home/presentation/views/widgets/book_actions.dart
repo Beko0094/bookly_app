@@ -6,29 +6,33 @@ class BookActhions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: const CustomButton(
-            backgroundColor: Colors.white,
-            btnText: '19.99 €',
-            textColor: Colors.black,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(16), bottomLeft: Radius.circular(16)),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Row(
+        children: [
+          Expanded(
+            child: const CustomButton(
+              backgroundColor: Colors.white,
+              btnText: '19.99 €',
+              textColor: Colors.black,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  bottomLeft: Radius.circular(16)),
+            ),
           ),
-        ),
-        Expanded(
-          child: const CustomButton(
-            backgroundColor: Color(0xffEF8262),
-            btnText: 'Free preview',
-            fontSize: 16,
-            textColor: Colors.white,
-            borderRadius: BorderRadius.only(
-                topRight: Radius.circular(16),
-                bottomRight: Radius.circular(16)),
+          Expanded(
+            child: const CustomButton(
+              backgroundColor: Color(0xffEF8262),
+              btnText: 'Free preview',
+              fontSize: 16,
+              textColor: Colors.white,
+              borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(16),
+                  bottomRight: Radius.circular(16)),
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
