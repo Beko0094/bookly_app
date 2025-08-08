@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FeatuerListViewItem extends StatelessWidget {
-  const FeatuerListViewItem({super.key});
+class FeatuerBooksListViewItem extends StatelessWidget {
+  const FeatuerBooksListViewItem({super.key});
 
   @override
   Widget build(BuildContext context) {
