@@ -13,7 +13,9 @@ class SimilerBooksListView extends StatelessWidget {
           itemCount: 10,
           itemBuilder: (context, i) => Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: CustombookImage(),
+                child: CustombookImage(
+                    imageUrl:
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl2UOMTP4OwTjuOTgkmE_X2skgCzwsuWB9lA&s'),
               )),
     );
   }

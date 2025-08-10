@@ -14,15 +14,18 @@ class FeatuerBooksListView extends StatelessWidget {
       builder: (context, state) {
         if (state is FeaturedBooksSucces) {
           return SizedBox(
-            height: MediaQuery.of(context).size.height * 0.30,
+            height: MediaQuery.of(context).size.height * 0.33,
             child: Padding(
               padding: const EdgeInsets.only(left: 22),
               child: ListView.builder(
+                physics: BouncingScrollPhysics(),
                 scrollDirection: Axis.horizontal,
-                itemCount: 5,
+                itemCount: state.books.length,
                 itemBuilder: (context, i) => Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: CustombookImage(),
+                  child: CustombookImage(
+                    imageUrl: state.books[i].volumeInfo.imageLinks.thumbnail,
+                  ),
                 ),
               ),
             ),

@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 class CustombookImage extends StatelessWidget {
-  const CustombookImage({super.key});
+  const CustombookImage({super.key, required this.imageUrl});
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +19,7 @@ class CustombookImage extends StatelessWidget {
               color: Colors.green,
               borderRadius: BorderRadius.circular(16),
               image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: NetworkImage(
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl2UOMTP4OwTjuOTgkmE_X2skgCzwsuWB9lA&s'))),
+                  fit: BoxFit.fill, image: NetworkImage(imageUrl))),
         ),
       ),
     );
