@@ -6,6 +6,6 @@ class CustomeErrorWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(message);
+    return Center(child: Text(message));
   }
 }
