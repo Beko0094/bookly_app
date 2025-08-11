@@ -14,7 +14,7 @@ class CustombookImage extends StatelessWidget {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: AspectRatio(
-        aspectRatio: 2.5 / 4,
+        aspectRatio: 2.45 / 4,
         child: Container(
             decoration: BoxDecoration(
               border: Border.all(

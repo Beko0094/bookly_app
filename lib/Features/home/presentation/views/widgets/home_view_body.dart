@@ -1,5 +1,5 @@
 import 'package:bookly_app/Core/Utilits/styles.dart';
-import 'package:bookly_app/Features/home/presentation/views/widgets/best_seller_list_view.dart';
+import 'package:bookly_app/Features/home/presentation/views/widgets/newet_books_list_view.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/custom_home_appbar.dart';
 import 'package:bookly_app/Features/home/presentation/views/widgets/featuer_books_list_view.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +10,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: const Column(
@@ -21,15 +22,19 @@ class HomeViewBody extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(left: 30),
                 child: Text(
-                  'BestSeller',
+                  'newestBooks',
                   style: Styles.textStyle18,
                 ),
               ),
+              SizedBox(height: 30),
             ],
           ),
         ),
         SliverFillRemaining(
-          child: const BestSellerListView(),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0),
+            child: const NewestBooksListView(),
+          ),
         )
       ],
     );
