@@ -1,18 +1,14 @@
-import 'package:bookly_app/Core/Utilits/app_router.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class CustombookImage extends StatelessWidget {
-  const CustombookImage({super.key, required this.imageUrl});
+  const CustombookImage({super.key, required this.imageUrl, this.onTap});
   final String imageUrl;
-
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        GoRouter.of(context).push(AppRouter.kBookDetailsView);
-      },
+      onTap: onTap,
       child: AspectRatio(
         aspectRatio: 2.45 / 4,
         child: Container(
